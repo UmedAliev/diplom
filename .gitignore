@@ -1,0 +1,7 @@
+.idea
+htdocs/index.php
+vendor
+examples
+.DS_Store
+phpunit.xml
+.phpunit.result.cache

@@ -1,0 +1,29 @@
+{
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "php": ">=7.4",
+    "illuminate/database": "^8.54",
+    "laminas/laminas-diactoros": "^2.6",
+    "psr/http-message": "^1.0",
+    "rakit/validation": "^1.4",
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/App/",
+      "Framework\\": "src/Framework/",
+      "Tests\\": "src/tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "symfony/var-dumper": "^5.3"
+  },
+
+  "scripts": {
+    "serve": "php -S 0.0.0.0:8080 index.php",
+    "tests": "phpunit"
+  }
+}
