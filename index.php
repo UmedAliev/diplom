@@ -22,7 +22,7 @@ $routes = new RouteCollection();
 //    });
 //    $routes->get('about', '/about', new Action\AboutAction());
 //    $routes->get('blog', '/blog', new Action\Blog\IndexAction());
-//    $routes->get('blog_show', '/blog/{id}', new Action\Blog\ShowAction(), ['id' => '\d+']);
+    $routes->get('blog_show', '/blog/{id}', new Action\Blog\ShowAction(), ['id' => '\d+']);
 //
 //    $routes->get('users_get', '/users', new Action\User\IndexAction());
 //    $routes->get('user_get', '/users/{id}', new Action\User\ShowAction(), ['id' => '\d+']);
@@ -30,12 +30,15 @@ $routes = new RouteCollection();
 //    $routes->post('user_store', '/users/{id}/update', new Action\User\UpdateAction(), ['id' => '\d+']);
 #======================================================================================
     $routes->get('home', '/', new Action\Home());
-//    $routes->get('reg', '/registration', new Action\Registration());
-//    $routes->post('reg', '/registration', new Action\Registration2());
-//    $routes->get('login', '/login', new Action\Authorithation());
-//    $routes->post('authorithation', '/authorithation', new Action\Authorization());
-    $routes->get('signin','/signin', new Action\Authorization\Signin());
+
+    $routes->get('signin','/signin', new Action\Authorization\SignIn());
     $routes->post('authorization','/authorization', new Action\Authorization\Authorization());
+    $routes->get('signup','/signup', new Action\Registration\SignUp());
+    $routes->post('registration','/registration',new Action\Registration\Registration() );
+    $routes->get('fillFormMovie','/fillFormMovie', new Action\Upload\FileForm());
+    $routes->post('upload','/upload',new Action\Upload\UploadFile() );
+
+    $routes->get('showMovie','/movie/{id}', new Action\ShowMovie(),['id' => '\d+']);
 
 
     $router = new Router($routes);

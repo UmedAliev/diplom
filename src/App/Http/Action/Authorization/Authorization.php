@@ -13,14 +13,15 @@ class Authorization extends Action
 {
     public function __invoke(ServerRequestInterface $request): HtmlResponse
     {
-dd($data);
+
         session_start();
-       session_destroy();
+//       session_destroy();
       $user =  User::where('email',$_POST['email'])->where('password', $_POST['password'])->first();
         if ($user){
             $_SESSION["user_id"] = $user->id;
 
-            return new HtmlResponse("<h1>you have email in system</h1>");
+//            return new HtmlResponse("<h1>you have email in system</h1>");
+            header("Location: /");
         }
         else{
             return new HtmlResponse("<h1>sorry get out /h1>");

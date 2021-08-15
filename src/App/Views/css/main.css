@@ -3182,7 +3182,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  padding: 40px 0;
+  padding: 0 0;
 }
 .sign__form {
   background-color: #28282d;
@@ -3192,7 +3192,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 20px 20px;
   position: relative;
 }
 .sign__form:before {
@@ -3223,7 +3223,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .sign__input {
   background-color: #2b2b31;
   border: none;
-  height: 50px;
+  height: 40px;
   position: relative;
   color: #fff;
   font-size: 15px;

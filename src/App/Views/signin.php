@@ -41,7 +41,7 @@
 				<div class="col-12">
 					<div class="sign__content">
 						<!-- authorization form -->
-						<form action="#"  class="sign__form">
+						<form action="/authorization" method="post" class="sign__form">
 							<a href="index.php" class="sign__logo">
 								<img src="img/logo.svg" alt="">
 							</a>
@@ -59,9 +59,9 @@
 								<label for="remember">Remember Me</label>
 							</div>
 							
-							<button class="sign__btn" type="submit">Sign in</button>
+							<button class="sign__btn" id="signin" type="submit">Sign in</button>
 
-							<span class="sign__text">Don't have an account? <a href="signup.php">Sign up!</a></span>
+							<span class="sign__text">Don't have an account? <a href="/signup">Sign up!</a></span>
 
 							<span class="sign__text"><a href="#">Forgot password?</a></span>
 						</form>

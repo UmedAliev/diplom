@@ -1,14 +1,25 @@
 $(function(){
+alert("srdf")
 
-    $(".sign__btn").click(function(){
+    $("#signin").click(function(){
 
-        let url = "{{ asset("/") }}";
-        $.post("http://diplom/authorization", function(data, status){
 
-             email = $("#email").val()
-             password = $("#password").val()
+        let email = $("#email").val();
+        let password = $("#password").val();
 
+        let data = {
+            email:email,
+            password:password,
+        };
+
+
+        $.post("http://localhost/diplom/authorization",data ,function(){
+
+        }).done(function(test){
+            alert("sdfdg")
         });
+
+
 
     });
 

@@ -9,23 +9,23 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet"> 
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" href="css/nouislider.min.css">
-	<link rel="stylesheet" href="css/ionicons.min.css">
-	<link rel="stylesheet" href="css/plyr.css">
-	<link rel="stylesheet" href="css/photoswipe.css">
-	<link rel="stylesheet" href="css/default-skin.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="src/App/Views/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="src/App/Views/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="src/App/Views/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="src/App/Views/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="src/App/Views/css/nouislider.min.css">
+	<link rel="stylesheet" href="src/App/Views/css/ionicons.min.css">
+	<link rel="stylesheet" href="src/App/Views/css/plyr.css">
+	<link rel="stylesheet" href="src/App/Views/css/photoswipe.css">
+	<link rel="stylesheet" href="src/App/Views/css/default-skin.css">
+	<link rel="stylesheet" href="src/App/Views/css/main.css">
 
 	<!-- Favicons -->
-	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
-	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
+	<link rel="icon" type="image/png" href="src/App/Views/icon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="src/App/Views/icon/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="src/App/Views/icon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="src/App/Views/icon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="src/App/Views/icon/apple-touch-icon-144x144.png">
 
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -157,13 +157,14 @@
 				<!-- end title -->
 
 				<!-- content -->
+
 				<div class="col-12 col-xl-6">
 					<div class="card card--details">
 						<div class="row">
 							<!-- card cover -->
 							<div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-5">
 								<div class="card__cover">
-									<img src="img/covers/cover.jpg" alt="">
+                                    <img src="http://diplom/<?php echo $movie->main_picture ?>" alt="src">
 								</div>
 							</div>
 							<!-- end card cover -->
@@ -183,7 +184,9 @@
 									<ul class="card__meta">
 										<li><span>Genre:</span> <a href="#">Action</a>
 										<a href="#">Triler</a></li>
-										<li><span>Release year:</span> 2017</li>
+                                        <li><span>Release year:</span> <?php
+                                            echo $movie->id;
+                                            ?></li>
 										<li><span>Running time:</span> 120 min</li>
 										<li><span>Country:</span> <a href="#">USA</a> </li>
 									</ul>
@@ -193,6 +196,7 @@
 									</div>
 								</div>
 							</div>
+
 							<!-- end card content -->
 						</div>
 					</div>
@@ -802,18 +806,18 @@
 	</div>
 
 	<!-- JS -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.mousewheel.min.js"></script>
-	<script src="js/jquery.mCustomScrollbar.min.js"></script>
-	<script src="js/wNumb.js"></script>
-	<script src="js/nouislider.min.js"></script>
-	<script src="js/plyr.min.js"></script>
-	<script src="js/jquery.morelines.min.js"></script>
-	<script src="js/photoswipe.min.js"></script>
-	<script src="js/photoswipe-ui-default.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="src/App/Views/js/jquery-3.3.1.min.js"></script>
+	<script src="src/App/Views/js/bootstrap.bundle.min.js"></script>
+	<script src="src/App/Views/js/owl.carousel.min.js"></script>
+	<script src="src/App/Views/js/jquery.mousewheel.min.js"></script>
+	<script src="src/App/Views/js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="src/App/Views/js/wNumb.js"></script>
+	<script src="src/App/Views/js/nouislider.min.js"></script>
+	<script src="src/App/Views/js/plyr.min.js"></script>
+	<script src="src/App/Views/js/jquery.morelines.min.js"></script>
+	<script src="src/App/Views/js/photoswipe.min.js"></script>
+	<script src="src/App/Views/js/photoswipe-ui-default.min.js"></script>
+	<script src="src/App/Views/js/main.js"></script>
 </body>
 
 </html>
