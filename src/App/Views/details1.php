@@ -31,7 +31,9 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Dmitry Volkov">
 	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
-
+    <?php
+    session_start()
+    ?>
 </head>
 <body class="body">
 	
@@ -164,9 +166,10 @@
 							<!-- card cover -->
 							<div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-5">
 								<div class="card__cover">
-                                    <img src="http://diplom/<?php echo $movie->main_picture ?>" alt="src">
+                                    <img src="http://diplom/<?php echo $movie->main_picture; ?>" alt="src">
 								</div>
 							</div>
+
 							<!-- end card cover -->
 
 							<!-- card content -->
@@ -229,10 +232,15 @@
 						<div class="details__devices">
 							<span class="details__devices-title">Available on devices:</span>
 							<ul class="details__devices-list">
+
 								<li><i class="icon ion-logo-apple"></i><span>IOS</span></li>
 								<li><i class="icon ion-logo-android"></i><span>Android</span></li>
 								<li><i class="icon ion-logo-windows"></i><span>Windows</span></li>
 								<li><i class="icon ion-md-tv"></i><span>Smart TV</span></li>
+
+                                <a href="/<?php echo isset($_SESSION['user_id']) ? $movie->media_path : "signin"; ?>" ><li><i class="icon ion-ios-download"></i><span>Download</span></li></a>
+                                =====================================================================
+
 							</ul>
 						</div>
 						<!-- end availables -->
@@ -276,6 +284,7 @@
 							<li class="nav-item">
 								<a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Reviews</a>
 							</li>
+
 
 							<li class="nav-item">
 								<a class="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">Photos</a>

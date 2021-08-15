@@ -198,15 +198,18 @@
 
                             <div class="card card--big">
                                 <div class="card__cover">
-                                    <img src="http://diplom/<?php echo $movie->main_picture ?>" alt="">
+                                    <img src="http://diplom/<?php echo $movie->main_picture ?>" alt="src">
                                     <a href="/showmovie?title=<?php echo $movie->title ?>" class="card__play">
                                         <i class="icon ion-ios-play"></i>
                                     </a>
                                 </div>
                                 <div class="card__content">
                                     <h3 class="card__title"><a
-                                                href="movie/<?php echo $movie->id ?>"><?php echo $movie->title ?></a>
+                                                href="/showmovie?id=<?php echo $movie->id ?>"><?php echo $movie->title ?></a>
                                     </h3>
+<!--                                    <h3 class="card__title"><a-->
+<!--                                                href="/movie/--><?php //echo $movie->id ?><!--">--><?php //echo $movie->title ?><!--</a>-->
+<!--                                    </h3>-->
                                     <span class="card__category">
 										<a href="#">Action</a>
 										<a href="#">Triler</a>

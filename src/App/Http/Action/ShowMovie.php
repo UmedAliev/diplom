@@ -16,8 +16,11 @@ class ShowMovie extends Action
 
     public function __invoke(ServerRequestInterface $request): HtmlResponse
     {
-        $id = $request->getAttribute('id');;
+        $id = $_GET['id'];
 
+
+//        $id = $request->getAttribute('id');
+//        $movie = Movie::find($id);
 
         $movie = Movie::find($id);
 
