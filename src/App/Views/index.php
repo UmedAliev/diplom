@@ -108,9 +108,8 @@
                             </button>
                             <?php
                             session_start();
-                            //                                session_destroy();
+                            // session_destroy();
                             if (!$_SESSION["user_id"]) {
-                                //                                    dd($_SESSION["user_id"]);
                                 ?>
                                 <a href="/signin" class="header__sign-in">
                                     <i class="icon ion-ios-log-in"></i>
@@ -119,10 +118,11 @@
                                 <?php
                             } else {
                                 ?>
-                                <a href="/#" class="header__sign-in">
+                                <a href="/profile" class="header__sign-in">
                                     <i class="icon ion-ios-log-in"></i>
                                     <span>profile</span>
                                 </a>
+
                                 <?php
                             }
                             ?>

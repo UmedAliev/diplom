@@ -60,7 +60,7 @@ class UploadFile extends Action
 
             move_uploaded_file($imgTmpNname, $imgTargetFile);
             move_uploaded_file($movieTmpName,$movieTargetFile);
-            echo "Success!";
+//            echo "Success!";
         }
 
             // make it

@@ -41,8 +41,10 @@ $routes = new RouteCollection();
     $routes->get('fillFormMovie','/fillFormMovie', new Action\Upload\FileForm());
     $routes->post('upload','/upload',new Action\Upload\UploadFile() );
     $routes->get('showMovie','/showmovie', new Action\ShowMovie());
+    $routes->get('profile','/profile', new Action\Profile());
+
 //    $routes->get('showMovie','/movie/{id}', new Action\ShowMovie(),['id' => '\d+']);
-    $routes->get('downloadMovie','/download/{id}', new Action\DownloadMovie(),['id' => '\d+']);
+//    $routes->get('downloadMovie','/download/{id}', new Action\DownloadMovie(),['id' => '\d+']);
 
 
     $router = new Router($routes);
