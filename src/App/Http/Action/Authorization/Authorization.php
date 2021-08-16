@@ -15,8 +15,8 @@ class Authorization extends Action
     {
 
         session_start();
-//       session_destroy();
-      $user =  User::where('email',$_POST['email'])->where('password', $_POST['password'])->first();
+
+      $user =  User::where('email',$request->getParsedBody()['email'])->where('password', md5($request->getParsedBody()['password']))->first();
         if ($user){
             $_SESSION["user_id"] = $user->id;
 
@@ -24,7 +24,7 @@ class Authorization extends Action
             header("Location: /");
         }
         else{
-            return new HtmlResponse("<h1>sorry get out /h1>");
+            return new HtmlResponse("<h1>шумо дар система кайд надоред");
         }
 
 

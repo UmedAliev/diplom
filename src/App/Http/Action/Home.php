@@ -14,10 +14,11 @@ class Home extends Action
 {
     public function __invoke(ServerRequestInterface $request): HtmlResponse
     {
-        $newItemSeason = Movie::orderBy('created_at','desc')->limit(2)->get();
-
+        $newItemSeason = Movie::orderBy('created_at','desc')->limit(4)->get();
+        $allMovies = Movie::all();
         $movies = [
-            'newItemSeason'=>$newItemSeason
+            'newItemSeason'=>$newItemSeason,
+            'allMovies' =>$allMovies,
         ];
 
          return $this->viewResponse('index', ['movies' => $movies]);

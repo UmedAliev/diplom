@@ -15,11 +15,11 @@ class Registration extends Action
     public function __invoke(ServerRequestInterface $request): HtmlResponse
     {
         $validator = new Validator();
-        $validation = $validator->make($request->getParsedBody(),[
+        $validation = $validator->make($request->getParsedBody(), [
 
             'name' => 'required|min:6',
-            'email'=> 'required|email',
-            'password'=> 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:6',
 
         ]);
         $validation->validate();
@@ -33,18 +33,16 @@ class Registration extends Action
             exit;
         } else {
             // validation passes
-            echo "Success!";
+//            echo "Success!";
         }
 
 
         User::create([
-        'name' => $_POST['name'],
-           'email'=>$_POST['email'],
-           'password'=>$_POST['password'],
+            'name' => $request->getParsedBody()['name'],
+            'email' => $request->getParsedBody()['email'],
+            'password' => md5($request->getParsedBody()['password']),
 
-           ]);
-
-
+        ]);
 
 
         return new HtmlResponse("<h1>done</h1>");

@@ -24,7 +24,7 @@ class ShowMovie extends Action
 
         $movie = Movie::find($id);
 
-        return $this->viewResponse('details1', ['movie' => $movie]);
+        return $this->viewResponse('details', ['movie' => $movie]);
     }
 
 }

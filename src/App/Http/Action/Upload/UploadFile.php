@@ -71,7 +71,7 @@ class UploadFile extends Action
                         Movie::create(
                             [
                                 "title" => $title,
-                                "description" => json_decode("{'description':{$description})}"),
+                                "description" => $description,
                                 "main_picture" => $imgTargetFile,
                                 "media" => "sfdgffds",
                                 "media_path" => $movieTargetFile,
